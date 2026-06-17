@@ -1,7 +1,8 @@
+`timescale 1ns/1ps
+
 module pipeline_reg_if_id (
     input  wire        clk,
-    input  wire        reset,
-    input  wire        en,
+    input  wire        stall,
     input  wire        clear,
     input  wire [31:0] instrF,
     input  wire [31:0] pcplus4F,
@@ -9,18 +10,18 @@ module pipeline_reg_if_id (
     output reg  [31:0] pcplus4D
 );
 
-    always @(posedge clk or posedge reset) begin
-        if (reset) begin
+    initial begin
+        instrD   = 32'b0;
+        pcplus4D = 32'b0;
+    end
+
+    always @(posedge clk) begin
+        if (clear) begin
             instrD   <= 32'b0;
             pcplus4D <= 32'b0;
-        end else if (en) begin
-            if (clear) begin
-                instrD   <= 32'b0;
-                pcplus4D <= 32'b0;
-            end else begin
-                instrD   <= instrF;
-                pcplus4D <= pcplus4F;
-            end
+        end else if (!stall) begin
+            instrD   <= instrF;
+            pcplus4D <= pcplus4F;
         end
     end
 

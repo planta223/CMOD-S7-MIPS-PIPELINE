@@ -1,0 +1,24 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../mips_pipeline.srcs/sources_1/imports/new/alu.v" \
+"../../../../mips_pipeline.srcs/sources_1/imports/new/alu_decoder.v" \
+"../../../../mips_pipeline.srcs/sources_1/imports/new/controller.v" \
+"../../../../mips_pipeline.srcs/sources_1/new/datapath_pipeline.v" \
+"../../../../mips_pipeline.srcs/sources_1/imports/new/dmem.v" \
+"../../../../mips_pipeline.srcs/sources_1/new/hazard_unit.v" \
+"../../../../mips_pipeline.srcs/sources_1/imports/new/imem.v" \
+"../../../../mips_pipeline.srcs/sources_1/imports/new/main_decoder.v" \
+"../../../../mips_pipeline.srcs/sources_1/new/pipeline_reg_ex_mem.v" \
+"../../../../mips_pipeline.srcs/sources_1/new/pipeline_reg_id_ex.v" \
+"../../../../mips_pipeline.srcs/sources_1/new/pipeline_reg_if_id.v" \
+"../../../../mips_pipeline.srcs/sources_1/new/pipeline_reg_mem_wb.v" \
+"../../../../mips_pipeline.srcs/sources_1/imports/new/regfile.v" \
+"../../../../mips_pipeline.srcs/sources_1/new/top_mips_pipeline.v" \
+"../../../../mips_pipeline.srcs/sources_1/new/top_mips_pipeline_timing.v" \
+"../../../../mips_pipeline.srcs/sim_1/new/tb_top_mips_pipeline.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

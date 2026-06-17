@@ -11,7 +11,7 @@ module imem (
             rom[i] = 32'h00000000; // NOP
         end
 
-        $readmemh("basic_test.hex", rom);
+        $readmemh("E:/Workspace/Vivado/mips_pipeline/basic_test.hex", rom);
     end
 
     assign instr = rom[addr[5:0]];
