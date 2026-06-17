@@ -1,0 +1,83 @@
+
+---
+
+## 2. .gitignore 예시
+
+`.gitignore` 파일을 프로젝트 폴더에 만들고 아래 내용을 넣으시면 됩니다.
+
+```gitignore
+# ============================================================
+# Vivado generated files
+# ============================================================
+
+*.jou
+*.log
+*.str
+*.zip
+*.html
+*.xml
+*.pb
+*.wdb
+*.wcfg
+
+# Vivado backup files
+*.backup.*
+*.bak
+*~
+.#*
+
+# Vivado generated directories
+.cache/
+.hw/
+.ip_user_files/
+.sim/
+.runs/
+.gen/
+.srcs/sources_1/bd/
+.Xil/
+
+# Simulation outputs
+xsim.dir/
+*.vcd
+*.fst
+*.saif
+
+# Synthesis / implementation generated outputs
+*.dcp
+*.bit
+*.ltx
+*.mmi
+*.rpt
+*.rpx
+*.edf
+*.edn
+*.ngc
+
+# Vivado temporary files
+usage_statistics_webtalk.html
+usage_statistics_webtalk.xml
+webtalk*.jou
+webtalk*.log
+
+# ============================================================
+# OS / editor files
+# ============================================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+
+# ============================================================
+# Keep important project files
+# ============================================================
+
+!*.xpr
+!*.v
+!*.sv
+!*.vh
+!*.xdc
+!README.md
+!.gitignore
