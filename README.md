@@ -1,5 +1,7 @@
 # CMOD-S7-MIPS-PIPELINE
 
+> **Status:** Completed on 2026-06-23
+
 Digilent Cmod S7-25 보드를 대상으로 32-bit 5-stage Pipelined MIPS Processor를 Verilog RTL로 구현하고, Vivado에서 기능 검증 및 타이밍 분석을 수행한 프로젝트입니다.
 
 ## 개발 환경
